@@ -31,3 +31,5 @@ Verificado em 18/08/2026. Documento vivo.
 ## Changelog
 
 - **2.1.0 (03/11/2026):** `meta-ads-operacao` ganha o ciclo de acompanhamento 3+7. Toda otimização agenda checagem em 3 dias e leitura em 7 dias; se a checagem de 3 dias otimizar de novo, a de 7 dias é cancelada e o ciclo recomeça.
+
+- **2.1.0 (21/11/2026):** sincronizacao com o OpenBot via GitHub verificada (teste de atualizacao automatica).
