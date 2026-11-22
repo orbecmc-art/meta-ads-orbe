@@ -1,6 +1,6 @@
 ---
 name: meta-ads-operacao
-version: '2.1.0'
+version: '2.2.0'
 description: "Execução de Meta Ads em conta real via conector MCP: criar campanhas, conjuntos\ne anúncios, ajustar orçamento, ativar e pausar entidades, subir criativos.\nUse quando o pedido for executar (não só planejar) uma ação na conta. Trabalha\nem par com a skill meta-ads-inteligencia, que fornece o conhecimento de\nplataforma, diagnóstico e planejamento. Distribuição restrita: esta skill\ndá poder de escrita sobre contas de clientes.\n"
 license: MIT
 ---
@@ -50,6 +50,8 @@ CONTAS_SOMENTE_LEITURA: nenhuma           # listar IDs de conta onde esta skill 
 4. **Valores em centavos na API.** Conferir moeda da conta antes de definir qualquer orçamento; o número enviado é valor x 100.
 5. **Depois de qualquer escrita, relatar antes/depois:** nome, ID, campo alterado, valor anterior, valor novo, status. Sempre na resposta ao usuário.
 6. **Checar erros de entrega** logo após criar ou ativar, e reportar o que estiver bloqueando.
+7. **Conjunto de Vendas com segmentação por dispositivo (API v27.0 ou depois):** mandar `device = 0` em `targeting_automation.individual_setting` quando a escolha de dispositivo for intencional. Sem isso a expansão vem ligada por padrão. Lookalike novo não aceita país: a localização vem do conjunto.
+8. **Nome de evento, conversão personalizada e público não carregam informação sensível** (procedimento, condição de saúde). Ver `sinal-capi.md`.
 
 ## Sequência padrão: subir campanha completa
 

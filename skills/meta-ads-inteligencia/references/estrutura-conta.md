@@ -1,6 +1,6 @@
 # Estrutura de conta · consolidar até doer
 
-> Verificado em 18/08/2026 · v1.0 · volatilidade: baixa
+> Verificado em 22/11/2026 · v1.1 · volatilidade: baixa
 
 O sistema aprende por volume de evento por unidade de aprendizado. Toda divisão de conjunto criada por conforto de leitura de relatório rouba aprendizado do modelo e cria sobreposição de leilão contra a própria conta.
 
@@ -17,7 +17,7 @@ Só separe quando houver **diferença econômica real** entre os grupos:
 1. Margem diferente entre linhas de produto ou serviço.
 2. Ticket diferente que muda o CPA aceitável.
 3. Geografia com custo de operação ou logística diferente.
-4. Exigência regulatória ou de compliance distinta (ex.: saúde com regras de conselho profissional).
+4. Exigência regulatória ou de compliance distinta (ex.: saúde com regras de conselho profissional; ver `nichos/` quando houver módulo do setor).
 
 Segmentar por criativo ou por "público frio versus quente" em 2026 é herança de 2019. Se alguém pedir essa separação, explique o custo (aprendizado dividido, leilão sobreposto) antes de executar.
 
@@ -58,5 +58,10 @@ Sai da fase de aprendizado com cerca de 50 conversões por semana no conjunto. C
 3. Estrutura mínima: 1 campanha, 1 conjunto (ou os poucos justificados), orçamento de campanha.
 4. Criativos suficientes para o piso semanal (ver `criativo-copy.md`).
 5. Nomenclatura aplicada.
-6. Destino pós-clique revisado: página carrega rápido no mobile, formulário curto, promessa do anúncio bate com a página. Em 2026 o gargalo de lead gen está depois do clique, não no leilão.
+6. Destino pós-clique revisado: página carrega rápido no mobile, formulário curto, promessa do anúncio bate com a página. Página e atendimento entram na revisão porque o custo por resultado do Gerenciador não mostra o que se perde depois do clique.
 7. Criação nasce **pausada**. Ativação segue as regras de autonomia do SKILL.md.
+
+## Changelog
+
+- **v1.1 (22/11/2026):** checklist pós-clique sem a regra geral tirada do WordStream 2025 (a edição 2026 inverteu o dado); ponteiro para módulos de nicho.
+- **v1.0 (18/08/2026):** versão inicial.

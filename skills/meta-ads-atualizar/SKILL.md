@@ -1,6 +1,6 @@
 ---
 name: meta-ads-atualizar
-version: '2.0.0'
+version: '2.1.0'
 description: "Rotina de atualização do plugin de Meta Ads. Use quando o usuário pedir para\natualizar a skill de Meta Ads, checar mudanças de plataforma, revisar\nbenchmarks ou verificar se algum arquivo de referência está desatualizado.\nBusca fontes primárias, compara com o que está escrito e propõe as\nreescritas com diff para aprovação.\n"
 license: MIT
 ---
@@ -13,7 +13,7 @@ O conhecimento desta família de skills perde validade em velocidades diferentes
 
 | Arquivo | Volatilidade | Fontes primárias a checar |
 |---|---|---|
-| `estado-da-arte-2026.md` | Alta | Página Out-of-Cycle Changes da Marketing API; Graph API Changelog; Meta Newsroom; Engineering at Meta (filtro ML applications); Business Help Center (Advantage+, atribuição) |
+| `estado-da-arte-2026.md` | Alta | Página Out-of-Cycle Changes da Marketing API; Marketing API changelog na rota `developers.facebook.com/documentation/ads-commerce/marketing-api/marketing-api-changelog` (a rota antiga `/docs/` fica defasada); Meta Newsroom; Engineering at Meta (filtro ML applications); Business Help Center (Advantage+, atribuição) |
 | `benchmarks.md` | Alta | Release trimestral da Meta (Investor Relations): preço médio por anúncio e impressões; WordStream/LocaliQ (anual); CTC Channel Mix Benchmark; Triple Whale; Gupta Media; IAB Brasil (abril); eMarketer |
 | `criativo-copy.md` | Alta | Motion Creative Benchmarks (anual); registro de vencedores da própria carteira (mensal, fonte interna) |
 | `leitura-dados.md` | Média | Changelog da Marketing API (remoções de campo, breakdowns, versões) |
@@ -21,11 +21,12 @@ O conhecimento desta família de skills perde validade em velocidades diferentes
 | `sinal-capi.md` | Baixa | Business Help Center (requisitos de volume por otimização, EMQ) |
 | `estrutura-conta.md` | Baixa | Business Help Center (estado Advantage+) |
 | `relatorios.md` | Baixa | Só muda quando a operação mudar |
+| `nichos/clinicas-medicas.md` | Média | CFM (publicidademedica.cfm.org.br e resoluções novas); políticas de anúncio da Meta: Saúde e bem-estar, Atributos pessoais, Medicamentos, Dados proibidos |
 
 ## Rotina (quando o usuário pedir "atualiza a skill")
 
 1. **Ler os cabeçalhos.** Cada referência traz `Verificado em` e volatilidade. Listar o que está vencido: alta volatilidade acima de 90 dias, média acima de 180.
-2. **Buscar as fontes primárias** dos arquivos vencidos (tabela acima). Regra de ouro herdada das skills: só entra fato com fonte primária; número só com amostra e período. Blog de ferramenta e conteúdo gerado por IA não são fonte.
+2. **Buscar as fontes primárias** dos arquivos vencidos (tabela acima). Regra de ouro herdada das skills: só entra fato com fonte primária; número só com amostra e período. Blog de ferramenta e conteúdo gerado por IA não são fonte. **Número lido de tabela em imagem (PDF de benchmark) só entra conferido:** o valor da edição anterior vezes a variação publicada tem que reproduzir o valor novo; sem variação publicada, ler por dois métodos (camada de texto e imagem) e só usar se baterem. Foi assim que a rodada de 22/11/2026 achou o erro nas tabelas da Motion.
 3. **Comparar** o que a fonte diz hoje com o que o arquivo afirma. Três categorias: confirmado (nada muda), mudou (reescrever o trecho), novo (adicionar com fonte e data).
 4. **Propor o diff** por arquivo: trecho atual → trecho novo → fonte. Nada é aplicado sem aprovação.
 5. **Aplicar o aprovado**, atualizar o cabeçalho (`Verificado em` + incremento de versão) e registrar um changelog curto no fim do arquivo alterado.

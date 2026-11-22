@@ -1,6 +1,6 @@
 # Relatórios · como comunicar resultado sem gerar pergunta de volta
 
-> Verificado em 18/08/2026 · v1.0 · volatilidade: baixa
+> Verificado em 22/11/2026 · v1.1 · volatilidade: baixa
 
 Relatório existe para o cliente decidir e confiar, não para provar que a agência trabalhou. Escrever para alguém com 2 minutos, em português direto, sem jargão sem explicação. O relatório não é burocracia: é a prova de que o dinheiro do cliente está trabalhando.
 
@@ -43,12 +43,12 @@ Regras: número absoluto sempre acompanhado da comparação; nunca celebrar mét
    estado do Advantage+ por seção, nomenclatura.
 
 4. CRIATIVO (criativo-copy.md)
-   Volume semanal vs piso de 8, distribuição de ângulos, fadiga atual,
+   Volume semanal vs piso combinado, distribuição de ângulos, fadiga atual,
    taxa de vencedores.
 
 5. LEITURA E METAS
-   Modelo de atribuição em uso, coerência da meta com o custo 2026
-   (leilão +12%, tributo BR +12,15%), amarração com número de negócio.
+   Modelo de atribuição em uso, coerência da meta com o custo do ano
+   (leilão e tributo, ver benchmarks.md), amarração com número de negócio.
 
 6. PLANO
    Ações ranqueadas por impacto x esforço, cada uma com o dado que a
@@ -59,12 +59,17 @@ Regras: número absoluto sempre acompanhado da comparação; nunca celebrar mét
 
 - Só entra número com fonte, amostra e período (regra de `benchmarks.md`). Citar a fonte no material.
 - O argumento de incrementalidade (Meta subestimado em 1,13x, Google Brand superestimado em 0,30x) é o mais forte disponível para defender verba em Meta; usar com o viés da fonte declarado.
-- Meta de custo por resultado em contrato: nunca travada em número absoluto sem cláusula de revisão anual indexada. O leilão sobe ~12% ao ano e o tributo brasileiro existe; contrato que ignora isso quebra a margem de alguém em 12 meses.
-- Piso de criativos por semana entra no escopo do contrato com o dado da Motion junto: abaixo de 8/semana a conta depende de sorte, e isso precisa estar escrito.
+- Meta de custo por resultado em contrato: nunca travada em número absoluto sem cláusula de revisão anual indexada. O preço por anúncio subiu 12% a 14% ao ano em 2026 e o tributo brasileiro sobe de novo em 2027 (ver `benchmarks.md`); contrato que ignora isso quebra a margem de alguém em 12 meses.
+- Piso de criativos por semana entra no escopo do contrato com o dado da Motion junto, calibrado pela verba da conta (ver `criativo-copy.md`). Abaixo do piso a conta depende de sorte, e isso precisa estar escrito.
 
 ## Conversas difíceis com dado
 
 - **"O resultado caiu" (mas foi a régua):** explicar a mudança de atribuição de março/2026 com a migração click-through → engage-through, mostrar o número de negócio (CRM) estável, propor padronizar o modelo e registrar no card.
 - **"Quero cortar Meta e pôr no Google":** tabela de incrementalidade do CTC. Google Brand devolve ~30% do que reporta; Meta devolve 113%.
-- **"Por que a verba precisa subir se está tudo igual":** release da Meta (+12% preço por anúncio) + fatura do próprio cliente (tributo). Verba nominal igual em 2026 compra um quarto menos de mídia que em 2025.
+- **"Por que a verba precisa subir se está tudo igual":** release da Meta (+12% a +14% de preço por anúncio em 2026) + fatura do próprio cliente (tributo). Verba nominal igual em 2026 compra um quarto menos de mídia que em 2025.
 - **Antes de ligar atribuição incremental:** avisar que o número vai cair de patamar e o histórico deixa de ser comparável. Essa conversa acontece antes da mudança; depois, vira crise de confiança.
+
+## Changelog
+
+- **v1.1 (22/11/2026):** números de custo passam a apontar para `benchmarks.md`, em vez de repetidos aqui; piso de criativos calibrado pela verba.
+- **v1.0 (18/08/2026):** versão inicial.

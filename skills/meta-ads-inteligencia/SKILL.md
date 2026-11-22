@@ -1,7 +1,7 @@
 ---
 name: meta-ads-inteligencia
-version: '2.0.0'
-description: "Inteligência de Meta Ads (Facebook/Instagram) atualizada para o estado da\nplataforma em 2026. Use sempre que a tarefa envolver Meta Ads: tirar dúvida\nsobre campanha, estrutura de conta, Advantage+, atribuição, Pixel/CAPI;\nplanejar campanha ou plano de criativos; escrever copy e briefs; diagnosticar\nqueda de resultado, CPM ou fadiga; montar relatório ou auditoria; precificar\nmeta de cliente. Cobre o mercado brasileiro (tributo, WhatsApp, verticais).\nEsta skill analisa e planeja; não executa mudanças em conta real.\n"
+version: '2.1.0'
+description: "Inteligência de Meta Ads (Facebook/Instagram) atualizada para o estado da\nplataforma em 2026. Use sempre que a tarefa envolver Meta Ads: tirar dúvida\nsobre campanha, estrutura de conta, Advantage+, atribuição, Pixel/CAPI;\nplanejar campanha ou plano de criativos; escrever copy e briefs; diagnosticar\nqueda de resultado, CPM ou fadiga; montar relatório ou auditoria; precificar\nmeta de cliente. Cobre o mercado brasileiro (tributo, WhatsApp, verticais),\nem qualquer setor, com módulo extra por nicho regulado (hoje: clínicas médicas).\nEsta skill analisa e planeja; não executa mudanças em conta real.\n"
 license: MIT
 ---
 
@@ -25,8 +25,11 @@ O conhecimento profundo fica em `references/`, carregado por demanda. Antes de r
 | Qualquer número, benchmark, meta, custo, tributo brasileiro | `references/benchmarks.md` |
 | Leitura de dados via conector MCP ou CSV do Gerenciador | `references/leitura-dados.md` |
 | Relatório semanal, auditoria, apresentação para cliente | `references/relatorios.md` |
+| Conta de nicho com módulo próprio (hoje: clínica ou consultório médico) | `references/nichos/clinicas-medicas.md` |
 
 Uma tarefa pode exigir mais de um arquivo. Planejar campanha do zero passa por `estrutura-conta`, `sinal-capi` e `criativo-copy`.
+
+**Módulo de nicho é extra.** A skill vale para qualquer setor e para quem gerencia os próprios anúncios. O módulo de `references/nichos/` só entra quando a conta for daquele nicho, e acrescenta regras por cima das gerais; não substitui nenhuma.
 
 ## Regras da casa (valem em toda resposta)
 

@@ -1,0 +1,12 @@
+{
+  "name": "orbe",
+  "description": "Plugins da Orbe Assessoria",
+  "owner": { "name": "Orbe Assessoria" },
+  "plugins": [
+    {
+      "name": "meta-ads-orbe",
+      "source": "./",
+      "description": "Meta Ads 2026: inteligência (análise e planejamento), operação (execução em conta real via MCP, restrita) e rotina de atualização."
+    }
+  ]
+}

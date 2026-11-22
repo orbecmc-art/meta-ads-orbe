@@ -1,6 +1,6 @@
 # Higiene de sinal · Pixel, CAPI e evento de otimização
 
-> Verificado em 18/08/2026 · v1.0 · volatilidade: baixa
+> Verificado em 22/11/2026 · v1.1 · volatilidade: baixa
 
 Em 2026 a conta ganha ou perde no sinal que entrega ao modelo, não no ajuste manual de lance. Nenhuma conta entra em rotina de otimização sem passar por esta checagem. Se o sinal está sujo, qualquer análise em cima dele é análise de lixo.
 
@@ -31,11 +31,19 @@ Cliente que só manda nome e CEP tem EMQ baixo por construção. A correção é
 **4. Se a conta não bate o volume mínimo, mude o evento de otimização.**
 Otimizar para compra em conta com 12 vendas por mês é escolher aleatoriedade. Suba um degrau no funil (iniciar checkout, lead qualificado, contato) e amarre o evento intermediário à venda por taxa conhecida. Registre a taxa no card do cliente e revise mensalmente.
 
+## Dado proibido: nome de evento não pode carregar informação sensível
+
+A Meta proíbe enviar certas categorias de informação pelas Ferramentas para Empresas. Saúde é a que mais pega anunciante: a lista inclui doenças e condições, procedimentos médicos, tratamentos e especificações corporais. A regra vale também para o nome que você dá às coisas: evento, conversão personalizada, público personalizado e parâmetro de URL não podem refletir nem insinuar a informação proibida.
+
+Na prática, `Lead_Rinoplastia`, `AgendouBotox`, `Interessados_Lipo` ou `/obrigado?procedimento=abdominoplastia` violam a política. A sanção vai de restrição de dados a suspensão das ferramentas.
+
+Padrão para conta de saúde: nomes genéricos (`Lead`, `Contato`, `Agendamento`). O detalhe fica no CRM, nunca no evento. Em qualquer setor sensível, conferir no Gerenciador de Eventos o diagnóstico de parâmetros bloqueados. Fonte: Business Help Center 361948878201809 (lista completa de categorias na própria página).
+
 ## Regras de leitura
 
 - Nunca inferir o evento de otimização pelo nome da campanha ou do conjunto. Ler `promoted_object.custom_event_type` na configuração real. Se estiver ausente, perguntar ao usuário, nunca assumir.
 - Conta mista (conjuntos otimizando para eventos diferentes): agrupar por evento antes de qualquer comparação de CPA. Comparar CPA de lead com CPA de compra na mesma tabela é erro de análise.
-- Qualidade de lead é entregável, não detalhe. Se o cliente recebe lead que não fecha, CPL bonito não vale nada. Quando a conta passar de 250 leads/mês com CAPI e `lead_id`, ligar lead quality optimization. A Meta está testando Sequenced Events e Preferred Lead Answers para qualidade de lead; vale ser dos primeiros a operar.
+- Qualidade de lead é entregável, não detalhe. Se o cliente recebe lead que não fecha, CPL bonito não vale nada. Quando a conta passar de 250 leads/mês com CAPI e `lead_id`, ligar lead quality optimization. A Meta está testando Sequenced Events e Preferred Lead Answers para qualidade de lead; vale ser dos primeiros a operar. Formulário instantâneo com verificação de telefone por código (v27.0, `phone_otp_verification_type`) corta lead com número errado antes de chegar ao comercial.
 
 ## Diagnóstico rápido de sinal (ordem de checagem quando o resultado está estranho)
 
@@ -44,3 +52,8 @@ Otimizar para compra em conta com 12 vendas por mês é escolher aleatoriedade. 
 3. Data Freshness atrasada? CAPI batch atrasando sinal atrasa o aprendizado.
 4. Volume do evento de otimização caiu abaixo do mínimo? A entrega degrada antes de o custo explodir.
 5. Alguém mudou o modelo de atribuição ou a janela? Ver `estado-da-arte-2026.md`, seção de atribuição.
+
+## Changelog
+
+- **v1.1 (22/11/2026):** seção de dado proibido em nome de evento, conversão, público e URL (saúde como caso principal); verificação de telefone por código no formulário.
+- **v1.0 (18/08/2026):** versão inicial.
